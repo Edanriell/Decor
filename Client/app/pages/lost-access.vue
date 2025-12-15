@@ -6,6 +6,6 @@
 
 <template>
 	<section>
-		<h1>Register Page</h1>
+		<h1>Forgot Password</h1>
 	</section>
 </template>
