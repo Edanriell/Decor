@@ -1,5 +1,11 @@
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+	definePageMeta({
+		layout: "default"
+	});
+</script>
 
 <template>
-	<h1>Home Page</h1>
+	<section>
+		<h1>Home Page</h1>
+	</section>
 </template>

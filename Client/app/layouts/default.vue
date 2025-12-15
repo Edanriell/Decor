@@ -3,11 +3,13 @@
 <template>
 	<div class="bg-[#faf8f6] w-full relative">
 		<header>
-			<h2></h2>
+			<h2>Header</h2>
 		</header>
 		<main>
 			<slot />
 		</main>
-		<footer></footer>
+		<footer>
+			<h2>Footer</h2>
+		</footer>
 	</div>
 </template>

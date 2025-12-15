@@ -1,9 +1,14 @@
+import tailwindcss from "@tailwindcss/vite";
 import { fileURLToPath } from "url";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
 	compatibilityDate: "2025-07-15",
 	devtools: { enabled: true },
+	css: ["~/assets/css/tailwind.css", "~/assets/css/styles.css"],
+	vite: {
+		plugins: [tailwindcss()]
+	},
 	modules: [
 		"@nuxt/eslint",
 		"@nuxt/fonts",
@@ -24,9 +29,9 @@ export default defineNuxtConfig({
 		"@features": fileURLToPath(new URL("./features", import.meta.url)),
 		"@widgets": fileURLToPath(new URL("./widgets", import.meta.url)),
 		"@pages": fileURLToPath(new URL("./pages", import.meta.url)),
-		"@views": fileURLToPath(new URL("./views", import.meta.url)),
 		"@shared": fileURLToPath(new URL("./shared", import.meta.url)),
-		"@entities": fileURLToPath(new URL("./entities", import.meta.url))
+		"@entities": fileURLToPath(new URL("./entities", import.meta.url)),
+		"@assets": fileURLToPath(new URL("./assets", import.meta.url))
 	},
 	fonts: {
 		families: [
@@ -37,5 +42,14 @@ export default defineNuxtConfig({
 				styles: ["normal", "italic"]
 			}
 		]
+	},
+	image: {
+		screens: {
+			sm: 390,
+			md: 834,
+			lg: 1024,
+			xl: 1280,
+			"2xl": 1536
+		}
 	}
 });
