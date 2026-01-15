@@ -25,13 +25,12 @@ export default defineNuxtConfig({
 		]
 	],
 	alias: {
-		"@app": fileURLToPath(new URL("./app", import.meta.url)),
-		"@features": fileURLToPath(new URL("./features", import.meta.url)),
-		"@widgets": fileURLToPath(new URL("./widgets", import.meta.url)),
-		"@pages": fileURLToPath(new URL("./pages", import.meta.url)),
-		"@shared": fileURLToPath(new URL("./shared", import.meta.url)),
-		"@entities": fileURLToPath(new URL("./entities", import.meta.url)),
-		"@assets": fileURLToPath(new URL("./assets", import.meta.url))
+		"@features": fileURLToPath(new URL("./app/features", import.meta.url)),
+		"@widgets": fileURLToPath(new URL("./app/widgets", import.meta.url)),
+		"@pages": fileURLToPath(new URL("./app/pages", import.meta.url)),
+		"@shared": fileURLToPath(new URL("./app/shared", import.meta.url)),
+		"@entities": fileURLToPath(new URL("./app/entities", import.meta.url)),
+		"@assets": fileURLToPath(new URL("./app/assets", import.meta.url))
 	},
 	fonts: {
 		families: [
