@@ -1,5 +1,5 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup></script>
 
-<template></template>
-
-<style scoped></style>
+<template>
+	<h1>Forgot Password</h1>
+</template>

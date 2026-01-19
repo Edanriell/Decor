@@ -1,5 +1,5 @@
-<script setup lang="ts"></script>
+<script lang="ts" setup></script>
 
-<template></template>
-
-<style scoped></style>
+<template>
+	<h1>Welcome back!</h1>
+</template>
