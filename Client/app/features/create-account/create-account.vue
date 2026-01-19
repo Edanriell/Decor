@@ -6,7 +6,7 @@
 	>
 		Create your free account!
 	</h1>
-	<form action="#" class="mt-6 flex flex-col gap-3">
+	<form action="#" class="mt-6 flex flex-col gap-3 tablet:mt-8">
 		<div class="flex flex-col gap-1">
 			<label
 				class="font-(--font-family) font-medium text-[0.875rem] leading-[1.3] text-(--colors-texts-text---mid-emphasis)"
@@ -56,7 +56,7 @@
 			</small>
 		</div>
 		<button
-			class="rounded-lg py-3 px-6 bg-(--colors-button-button---primary) w-full font-(--font-family) font-semibold text-[0.875rem] leading-[1.3] uppercase text-(--colors-button-button-text-light) cursor-pointer"
+			class="rounded-lg py-3 px-6 bg-(--colors-button-button---primary) w-full font-(--font-family) font-semibold text-[0.875rem] leading-[1.3] uppercase text-(--colors-button-button-text-light) cursor-pointer tablet:mt-3"
 			type="submit"
 		>
 			Create an account
