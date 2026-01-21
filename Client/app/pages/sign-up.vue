@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { CreateAccount } from "@features/create-account";
+	import { CreateAccount } from "@features/create-account";
 
-definePageMeta({
+	definePageMeta({
 		layout: "auth"
 	});
 </script>
