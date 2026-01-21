@@ -8,7 +8,7 @@
 			>
 				Welcome back!
 			</h1>
-			<p class="font-[Urbanist] font-normal text-xs leading-[1.8] text-[--colors-texts-text---low-emphasis] mt-1">
+			<p class="font-[Urbanist] font-normal text-xs leading-[1.8] text-(--colors-texts-text---low-emphasis) mt-1">
 				Login to your account!
 			</p>
 		</div>
