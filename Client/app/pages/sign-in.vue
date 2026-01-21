@@ -1,7 +1,7 @@
 <script lang="ts" setup>
-import { LogIn } from "@features/log-in";
+	import { LogIn } from "@features/log-in";
 
-definePageMeta({
+	definePageMeta({
 		layout: "auth"
 	});
 </script>
