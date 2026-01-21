@@ -49,7 +49,7 @@
 			</button>
 		</form>
 		<span
-			class="block font-[Urbanist] font-normal text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---low-emphasis) uppercase mt-3 mb-3 desktop:mt-6 desktop:mb-6"
+			class="block font-[Urbanist] font-normal text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---low-emphasis) uppercase mt-3 mb-3 desktop:mt-5 desktop:mb-5"
 		>
 			Or
 		</span>
@@ -90,7 +90,7 @@
 			</button>
 		</div>
 		<p
-			class="block text-center mt-6 font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) desktop:mt-12"
+			class="block text-center mt-6 font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) desktop:mt-5"
 		>
 			Don’t have an account?
 			<NuxtLink
