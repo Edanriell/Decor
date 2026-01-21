@@ -28,7 +28,7 @@
 				/>
 			</div>
 			<button
-				class="rounded-lg py-3 px-6 bg-(--colors-button-button---primary) w-full font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] uppercase text-(--colors-button-button-text-light) cursor-pointer"
+				class="rounded-lg py-3 px-6 bg-(--colors-button-button---primary) w-full font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] uppercase text-(--colors-button-button-text-light) cursor-pointer desktop:mt-3"
 				type="submit"
 			>
 				Reset password
