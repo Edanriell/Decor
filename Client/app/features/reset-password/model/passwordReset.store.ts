@@ -1,10 +1,10 @@
-import { defineStore } from "pinia";
+import {defineStore} from "pinia";
 
 export type Step = "email" | "otp" | "new-password";
 
 export const usePasswordResetStore = defineStore("passwordReset", {
 	state: () => ({
-		currentStep: "otp" as Step,
+		currentStep: "new-password" as Step,
 		email: "test@gmail.com",
 		otp: "",
 		otpVerified: false,
@@ -82,7 +82,7 @@ export const usePasswordResetStore = defineStore("passwordReset", {
 			this.currentStep = "new-password";
 		},
 		$reset() {
-			this.currentStep = "otp";
+			this.currentStep = "new-password";
 			this.email = "";
 			this.otp = "";
 			this.otpVerified = false;
