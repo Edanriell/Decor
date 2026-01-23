@@ -10,12 +10,12 @@
 	const store = usePasswordResetStore();
 
 	// Or use a watcher with interval
-	// const checkOtpExpiration = setInterval(() => {
-	// 	if (store.isOtpExpired && store.currentStep === "otp") {
-	// 		// Optionally show a toast: "OTP expired, please try again"
-	// 		store.$reset();
-	// 	}
-	// }, 1000);
+	const checkOtpExpiration = setInterval(() => {
+		if (store.isOtpExpired && store.currentStep === "otp") {
+			// Optionally show a toast: "OTP expired, please try again"
+			store.$reset();
+		}
+	}, 1000);
 
 	async function handleEmailSubmit() {
 		await $fetch("api/auth/send-otp", { method: "POST", body: { email: email.value } });
@@ -38,23 +38,23 @@
 	}
 
 	// Reset when user leaves the page
-	// onBeforeRouteLeave(() => {
-	// 	store.$reset();
-	// });
+	onBeforeRouteLeave(() => {
+		store.$reset();
+	});
 
 	// Check otp on mount if returning to page
 	onMounted(() => {
-		// if (store.currentStep === "otp" && store.isOtpExpired) {
-		// 	store.$reset();
-		// }
+		if (store.currentStep === "otp" && store.isOtpExpired) {
+			store.$reset();
+		}
 	});
 
 	// Also reset on component unmount (e.g., closing tab and coming back)
 	onUnmounted(() => {
-		// store.$reset();
+		store.$reset();
 	});
 
-	// onUnmounted(() => clearInterval(checkOtpExpiration));
+	onUnmounted(() => clearInterval(checkOtpExpiration));
 </script>
 
 <template>
@@ -97,7 +97,7 @@
 			Back to login?
 			<NuxtLink
 				class="font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) border-b border-(--colors-border-border---theme)"
-				to="/sign-in"
+				to="/(auth)/sign-in"
 			>
 				Login
 			</NuxtLink>
@@ -178,7 +178,7 @@
 			Didn’t receive the mail?
 			<NuxtLink
 				class="font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) border-b border-(--colors-border-border---theme)"
-				to="/sign-in"
+				to="/(auth)/sign-in"
 			>
 				Resend
 			</NuxtLink>
@@ -242,25 +242,10 @@
 			Back to login?
 			<NuxtLink
 				class="font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) border-b border-(--colors-border-border---theme)"
-				to="/sign-in"
+				to="/(auth)/sign-in"
 			>
 				Login
 			</NuxtLink>
 		</p>
 	</div>
 </template>
-
-<!--&lt;!&ndash; Step 1: Email &ndash;&gt;-->
-<!--<form v-if="currentStep === 'email'" @submit.prevent="handleEmailSubmit">-->
-<!--<input v-model="email" type="email" placeholder="Enter your email" />-->
-<!--<button type="submit">Send OTP</button>-->
-<!--</form>-->
-
-<!--&lt;!&ndash; Step 2: OTP Verification &ndash;&gt;-->
-<!--<form v-if="currentStep === 'otp'" @submit.prevent="handleOtpSubmit">-->
-<!--<input v-model="otp" type="text" placeholder="Enter OTP code" />-->
-<!--<button type="submit">Verify</button>-->
-<!--</form>-->
-
-<!--&lt;!&ndash; Step 3: New Password &ndash;&gt;-->
-<!--<NewPasswordForm v-if="currentStep === 'new-password'" @submit="handlePasswordReset" />-->

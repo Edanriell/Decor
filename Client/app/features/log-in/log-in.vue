@@ -95,7 +95,7 @@
 			Don’t have an account?
 			<NuxtLink
 				class="font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) border-b border-(--colors-border-border---theme)"
-				to="/sign-up"
+				to="/(auth)/sign-up"
 			>
 				Create your free account
 			</NuxtLink>
