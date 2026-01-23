@@ -237,7 +237,7 @@
 			</button>
 		</form>
 		<p
-			class="block text-center mt-3 font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) desktop:mt-5"
+			class="block text-center mt-3 font-[Urbanist] font-normal text-[0.75rem] leading-[1.6] capitalize text-(--colors-texts-text---high-emphasis) desktop:mt-3"
 		>
 			Back to login?
 			<NuxtLink
