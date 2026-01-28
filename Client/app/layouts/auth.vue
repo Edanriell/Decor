@@ -1,6 +1,4 @@
-<script lang="ts" setup>
-	const layoutImageSrc = "/images/modern-interior.jpg";
-</script>
+<script lang="ts" setup></script>
 
 <template>
 	<div
@@ -54,12 +52,12 @@
 			</svg>
 			<NuxtPicture
 				:img-attrs="{ class: 'w-full h-full object-cover' }"
-				:src="layoutImageSrc"
 				alt="Modern interior"
 				class="absolute inset-0 w-full h-full"
 				densities="x1 x2"
 				placeholder="[60, 40, 70, 15]"
 				quality="100"
+				src="/images/modern-interior.jpg"
 			/>
 		</div>
 		<main class="bg-(--colors-surface-surface-white)">
