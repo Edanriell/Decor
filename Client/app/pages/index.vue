@@ -6,7 +6,9 @@
 
 <template>
 	<section class="relative">
-		<div class="pt-29 pl-5 pr-5 pb-111 md:pt-70.25 md:pr-12 md:pl-12 md:pb-162.75">
+		<div
+			class="pt-29 pl-5 pr-5 pb-111 md:pt-70.25 md:pr-12 md:pl-12 md:pb-162.75 lg:pt-33 lg:pl-67.75 lg:pr-67.75 lg:pb-89"
+		>
 			<h1
 				class="relative z-[2] font-[Urbanist] font-semibold text-[3rem] leading-[1.2] text-center text-(--colors-primary-white) uppercase text-pretty md:font-bold md:text-[3.75rem]"
 			>
