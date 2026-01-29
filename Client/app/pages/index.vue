@@ -6,14 +6,14 @@
 
 <template>
 	<section class="relative">
-		<div class="pt-29 pl-5 pr-5 pb-111">
+		<div class="pt-29 pl-5 pr-5 pb-111 md:pt-70.25 md:pr-12 md:pl-12 md:pb-162.75">
 			<h1
-				class="relative z-[2] font-[Urbanist] font-semibold text-[3rem] leading-[1.2] text-center text-(--colors-primary-white) uppercase text-pretty"
+				class="relative z-[2] font-[Urbanist] font-semibold text-[3rem] leading-[1.2] text-center text-(--colors-primary-white) uppercase text-pretty md:font-bold md:text-[3.75rem]"
 			>
 				Masterpieces crafted from solid wood
 			</h1>
 			<p
-				class="relative z-[2] mt-2 mb-6 font-[Urbanist] font-normal text-[0.875rem] leading-[1.3] text-center text-(--colors-primary-white)"
+				class="relative z-[2] mt-2 mb-6 font-[Urbanist] font-normal text-[0.875rem] leading-[1.3] text-center text-(--colors-primary-white) md:mt-4 md:font-medium md:mr-23.75 md:ml-23.75"
 			>
 				Our company is happy to take up production of custom-made wooden furniture according to individual
 				sizes.
