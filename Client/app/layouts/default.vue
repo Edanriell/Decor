@@ -1,7 +1,7 @@
 <script lang="ts" setup></script>
 
 <template>
-	<div class="bg-[#faf8f6] w-full relative">
+	<div class="bg-(--colors-surface-surface-white) w-full relative">
 		<header>
 			<h2>Header</h2>
 		</header>

@@ -45,6 +45,33 @@
 			route: "/"
 		}
 	];
+
+	const freshArrival = [
+		{
+			image: "/images/products/awesome-sponge-armchair.png",
+			name: "Awesome Sponge Armchair ",
+			price: "12.76",
+			route: "/"
+		},
+		{
+			image: "/images/products/black-night-lamp.png",
+			name: "Black Night Lamp",
+			price: "12.76",
+			route: "/"
+		},
+		{
+			image: "/images/products/wooden-box-with-stand.png",
+			name: "Wooden Box with Stand",
+			price: "12.76",
+			route: "/"
+		},
+		{
+			image: "/images/products/blue-wooden-armchair.png",
+			name: "Blue Wooden Armchair",
+			price: "12.76",
+			route: "/"
+		}
+	];
 </script>
 
 <template>
@@ -117,14 +144,28 @@
 			</li>
 		</ol>
 	</section>
-	<section class="relative">
+	<section class="relative pt-8 pb-8 pl-4 pr-4">
 		<header>
-			<div>
-				<h2>Fresh arrival</h2>
-				<p>Fresh styles, new beginnings: discover our latest arrivals!</p>
+			<div class="flex flex-col mb-5">
+				<h2
+					class="mb-1 font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-(--colors-texts-text---high-emphasis)"
+				>
+					Fresh arrival
+				</h2>
+				<p
+					class="font-[Urbanist] font-normal text-[0.875rem] leading-[1.3] text-(--colors-texts-text---mid-emphasis)"
+				>
+					Fresh styles, new beginnings: discover our latest arrivals!
+				</p>
 			</div>
-			<NuxtLink>
-				<span>View all</span>
+			<NuxtLink
+				class="absolute bottom-0 left-[50%] translate-x-[-50%] inline-flex flex-row items-center rounded-lg gap-2 px-6 py-3 bg-(--colors-surface-surface---medium) cursor-pointer"
+				to="/"
+			>
+				<span
+					class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] uppercase text-(--colors-texts-text---high-emphasis)"
+					>View all</span
+				>
 				<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
 					<path
 						clip-rule="evenodd"
@@ -135,33 +176,49 @@
 				</svg>
 			</NuxtLink>
 		</header>
-		<ol>
-			<li>
-				<article>
-					<div>
+		<ol class="grid grid-cols-2 gap-x-4 gap-y-6 pb-15.5">
+			<li v-for="item in freshArrival" :key="item.name">
+				<article class="flex flex-col gap-4">
+					<div class="relative rounded-lg bg-(--colors-surface-surface---light) w-full h-58.5">
 						<NuxtPicture
 							:img-attrs="{ class: 'w-full h-full object-cover' }"
+							:src="item.image"
 							alt="Modern interior"
 							class="absolute inset-0 w-full h-full z-[1]"
 							densities="x1 x2"
 							placeholder="[60, 40, 70, 15]"
 							quality="100"
-							src="/images/modern-interior-2.jpg"
 						/>
 					</div>
-					<footer>
-						<div>
-							<h3>Awesome Sponge Armchair</h3>
-							<small>$ 12.76</small>
-						</div>
-						<svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
-							<path
-								clip-rule="evenodd"
-								d="M1.28995 0H11.6899L11.6899 10.4H10.2899L10.2899 2.38995L0.989949 11.6899L0 10.7L9.3 1.4H1.28995V0Z"
-								fill="#181513"
-								fill-rule="evenodd"
-							/>
-						</svg>
+					<footer class="pl-1 pr-1">
+						<NuxtLink :to="item.route" class="flex flex-row items-center justify-between">
+							<div class="flex flex-col gap-1">
+								<h3
+									class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis)"
+								>
+									{{ item.name }}
+								</h3>
+								<small
+									class="font-[Urbanist] font-medium text-[0.75rem] leading-[1.2] capitalize text-(--colors-texts-text---low-emphasis)"
+									>$ {{ item.price }}</small
+								>
+							</div>
+							<svg
+								class="w-2.25 h-2.25 basis-8 shrink-0 grow-0"
+								fill="none"
+								height="12"
+								viewBox="0 0 12 12"
+								width="12"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									clip-rule="evenodd"
+									d="M1.28995 0H11.6899L11.6899 10.4H10.2899L10.2899 2.38995L0.989949 11.6899L0 10.7L9.3 1.4H1.28995V0Z"
+									fill="#181513"
+									fill-rule="evenodd"
+								/>
+							</svg>
+						</NuxtLink>
 					</footer>
 				</article>
 			</li>
