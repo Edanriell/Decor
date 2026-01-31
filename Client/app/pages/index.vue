@@ -90,13 +90,28 @@
 			src="/images/modern-interior-2.jpg"
 		/>
 	</section>
-	<section class="relative pt-8 pl-4 pr-4 pb-8">
+	<section class="relative pt-8 pl-4 pr-4 pb-8 md:pt-18 md:pl-8 md:pr-8 md:pb-18">
 		<h2 class="sr-only">Product Categories</h2>
-		<ol class="flex flex-row flex-wrap gap-4">
-			<li v-for="category in productCategories" :key="category.route" class="relative">
+		<ol class="flex flex-row flex-wrap gap-4 md:-ml-2 md:min-w-192.5 md:justify-center">
+			<li
+				v-for="(category, index) in productCategories"
+				:key="category.route"
+				:class="[
+					'md:w-41',
+					index === 1 && 'md:w-46',
+					index === 2 && 'md:w-44',
+					index === 3 && 'md:w-49.5',
+					index === 4 && 'md:w-56',
+					index === 5 && 'md:w-63',
+					index === 6 && 'md:w-65.5',
+					index === 7 && 'md:w-69',
+					index === 8 && 'md:w-45',
+					index === 9 && 'md:w-70.5'
+				]"
+			>
 				<NuxtLink
 					:to="category.route"
-					class="block font-[Urbanist] border border-(--colors-border-border---light1) rounded-lg px-4 py-3 font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis)"
+					class="block font-[Urbanist] border border-(--colors-border-border---light1) rounded-lg px-4 py-3 font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis) text-center"
 					>{{ category.name }}</NuxtLink
 				>
 			</li>
