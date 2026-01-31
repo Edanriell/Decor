@@ -90,23 +90,23 @@
 			src="/images/modern-interior-2.jpg"
 		/>
 	</section>
-	<section class="relative pt-8 pl-4 pr-4 pb-8 md:pt-18 md:pl-8 md:pr-8 md:pb-18">
+	<section class="relative pt-8 pl-4 pr-4 pb-8 md:pt-18 md:pl-8 md:pr-8 md:pb-18 lg:pt-24 lg:pl-20 lg:pr-20 lg:pb-24">
 		<h2 class="sr-only">Product Categories</h2>
-		<ol class="flex flex-row flex-wrap gap-4 md:-ml-2 md:min-w-192.5 md:justify-center">
+		<ol class="flex flex-row flex-wrap gap-4 md:-ml-2 md:min-w-192.5 md:justify-center lg:min-w-282.75 lg:-ml-2">
 			<li
 				v-for="(category, index) in productCategories"
 				:key="category.route"
 				:class="[
-					'md:w-41',
-					index === 1 && 'md:w-46',
-					index === 2 && 'md:w-44',
-					index === 3 && 'md:w-49.5',
-					index === 4 && 'md:w-56',
-					index === 5 && 'md:w-63',
-					index === 6 && 'md:w-65.5',
-					index === 7 && 'md:w-69',
-					index === 8 && 'md:w-45',
-					index === 9 && 'md:w-70.5'
+					'md:w-41 lg:w-40.75',
+					index === 1 && 'md:w-46 lg:w-46',
+					index === 2 && 'md:w-44 lg:w-59',
+					index === 3 && 'md:w-49.5 lg:w-59',
+					index === 4 && 'md:w-56 lg:w-59',
+					index === 5 && 'md:w-63 lg:w-68.75',
+					index === 6 && 'md:w-65.5 lg:w-38',
+					index === 7 && 'md:w-69 lg:w-44.25',
+					index === 8 && 'md:w-45 lg:w-42.5',
+					index === 9 && 'md:w-70.5 lg:w-67.5'
 				]"
 			>
 				<NuxtLink
