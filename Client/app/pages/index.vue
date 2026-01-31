@@ -2,6 +2,49 @@
 	definePageMeta({
 		layout: "default"
 	});
+
+	const productCategories = [
+		{
+			name: "Sofa",
+			route: "/"
+		},
+		{
+			name: "Chair",
+			route: "/"
+		},
+		{
+			name: "Table",
+			route: "/"
+		},
+		{
+			name: "Storage",
+			route: "/"
+		},
+		{
+			name: "Lighting",
+			route: "/"
+		},
+		{
+			name: "Home decor",
+			route: "/"
+		},
+		{
+			name: "Kids furniture",
+			route: "/"
+		},
+		{
+			name: "Office furniture",
+			route: "/"
+		},
+		{
+			name: "Beds",
+			route: "/"
+		},
+		{
+			name: "Outdoor furniture",
+			route: "/"
+		}
+	];
 </script>
 
 <template>
@@ -46,5 +89,67 @@
 			quality="100"
 			src="/images/modern-interior-2.jpg"
 		/>
+	</section>
+	<section class="relative pt-8 pl-4 pr-4 pb-8">
+		<h2 class="sr-only">Product Categories</h2>
+		<ol class="flex flex-row flex-wrap gap-4">
+			<li v-for="category in productCategories" :key="category.route" class="relative">
+				<NuxtLink
+					:to="category.route"
+					class="block font-[Urbanist] border border-(--colors-border-border---light1) rounded-lg px-4 py-3 font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis)"
+					>{{ category.name }}</NuxtLink
+				>
+			</li>
+		</ol>
+	</section>
+	<section class="relative">
+		<header>
+			<div>
+				<h2>Fresh arrival</h2>
+				<p>Fresh styles, new beginnings: discover our latest arrivals!</p>
+			</div>
+			<NuxtLink>
+				<span>View all</span>
+				<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
+					<path
+						clip-rule="evenodd"
+						d="M0.859967 0H7.7933L7.7933 6.93333H6.85997L6.85997 1.5933L0.659966 7.7933L0 7.13333L6.2 0.933333H0.859967V0Z"
+						fill="#181513"
+						fill-rule="evenodd"
+					/>
+				</svg>
+			</NuxtLink>
+		</header>
+		<ol>
+			<li>
+				<article>
+					<div>
+						<NuxtPicture
+							:img-attrs="{ class: 'w-full h-full object-cover' }"
+							alt="Modern interior"
+							class="absolute inset-0 w-full h-full z-[1]"
+							densities="x1 x2"
+							placeholder="[60, 40, 70, 15]"
+							quality="100"
+							src="/images/modern-interior-2.jpg"
+						/>
+					</div>
+					<footer>
+						<div>
+							<h3>Awesome Sponge Armchair</h3>
+							<small>$ 12.76</small>
+						</div>
+						<svg fill="none" height="12" viewBox="0 0 12 12" width="12" xmlns="http://www.w3.org/2000/svg">
+							<path
+								clip-rule="evenodd"
+								d="M1.28995 0H11.6899L11.6899 10.4H10.2899L10.2899 2.38995L0.989949 11.6899L0 10.7L9.3 1.4H1.28995V0Z"
+								fill="#181513"
+								fill-rule="evenodd"
+							/>
+						</svg>
+					</footer>
+				</article>
+			</li>
+		</ol>
 	</section>
 </template>
