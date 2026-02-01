@@ -228,4 +228,71 @@
 			</li>
 		</ol>
 	</section>
+	<section class="pt-12 pb-12">
+		<header class="pl-5 pr-5 pb-6 flex flex-col gap-4">
+			<h2
+				class="font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-center text-(--colors-texts-text---high-emphasis)"
+			>
+				we are passionate about creating furniture that enriches lives and transforms spaces.
+			</h2>
+			<p
+				class="font-[Urbanist] font-normal text-[0.875rem] leading-[1.8] text-center text-(--colors-texts-text---low-emphasis)"
+			>
+				We are passionate about creating furniture that enriches lives and transforms spaces. With a deep
+				appreciation for craftsmanship and a commitment to exceptional quality, we strive to offer furniture
+				pieces that combine timeless elegance with modern functionality.
+			</p>
+		</header>
+		<div class="relative">
+			<div class="block mb-[-63px] relative h-38 ml-13.25 mr-13.25 rounded-xs overflow-hidden">
+				<NuxtPicture
+					:img-attrs="{ class: ['w-full h-full object-cover'] }"
+					alt="Modern interior"
+					class="w-full h-full z-[1]"
+					densities="x1 x2"
+					placeholder="[60, 40, 70, 15]"
+					quality="100"
+					src="images/drawing.jpg"
+				/>
+			</div>
+			<dl class="pt-22.75 pb-8 flex flex-row pl-4 pr-4 justify-between bg-(--colors-surface-surface---medium)">
+				<div class="flex flex-col-reverse gap-1 items-center basis-26.5">
+					<dt
+						class="font-[Urbanist] font-normal text-[0.625rem] leading-[1.3] capitalize text-center text-(--colors-texts-text---low-emphasis)"
+					>
+						Total Products
+					</dt>
+					<dd
+						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis)"
+					>
+						2465
+					</dd>
+				</div>
+				<div class="flex flex-col-reverse gap-1 items-center basis-26.5">
+					<dt
+						class="font-[Urbanist] font-normal text-[0.625rem] leading-[1.3] capitalize text-center text-(--colors-texts-text---low-emphasis)"
+					>
+						Happy Customers
+					</dt>
+					<dd
+						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis)"
+					>
+						14782 +
+					</dd>
+				</div>
+				<div class="flex flex-col-reverse gap-1 items-center basis-26.5">
+					<dt
+						class="font-[Urbanist] font-normal text-[0.625rem] leading-[1.3] capitalize text-center text-(--colors-texts-text---low-emphasis)"
+					>
+						Across the country
+					</dt>
+					<dd
+						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis)"
+					>
+						20 +
+					</dd>
+				</div>
+			</dl>
+		</div>
+	</section>
 </template>
