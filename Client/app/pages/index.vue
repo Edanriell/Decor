@@ -305,4 +305,61 @@
 			</dl>
 		</div>
 	</section>
+	<section>
+		<header>
+			<h2>Making Home A Happy Place</h2>
+			<p>Get more, pay less: Your ticket to furniture bliss!</p>
+		</header>
+		<ol>
+			<li>
+				<h3>Seasonal Sales</h3>
+				<p>Upgrade your space without breaking the bank!</p>
+				<NuxtLink>
+					<span>Explore</span>
+					<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
+						<path
+							clip-rule="evenodd"
+							d="M0.859967 0H7.7933L7.7933 6.93333H6.85997L6.85997 1.5933L0.659966 7.7933L0 7.13333L6.2 0.933333H0.859967V0Z"
+							fill="#181513"
+							fill-rule="evenodd"
+						/>
+					</svg>
+				</NuxtLink>
+			</li>
+			<li>
+				<h3>Time is Ticking</h3>
+				<p>Shop Now for Exclusive Limited-Time Discounts!</p>
+				<NuxtLink>
+					<span>Explore</span>
+					<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
+						<path
+							clip-rule="evenodd"
+							d="M0.859967 0H7.7933L7.7933 6.93333H6.85997L6.85997 1.5933L0.659966 7.7933L0 7.13333L6.2 0.933333H0.859967V0Z"
+							fill="#181513"
+							fill-rule="evenodd"
+						/>
+					</svg>
+				</NuxtLink>
+			</li>
+			<li>
+				<article>
+					<h3>How we craft comfort</h3>
+					<figure class="relative">
+						<div class="relative w-full aspect-video bg-(--colors-surface-surface---light) rounded-lg overflow-hidden">
+							<button
+								type="button"
+								class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 p-2 rounded-lg bg-(--colors-primary-white) flex items-center justify-center"
+								aria-label="Play video"
+							>
+								<svg width="12" height="16" viewBox="0 0 12 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.376 7.98172L0.77735 15.0475C0.54759 15.2007 0.23715 15.1386 0.0839701 14.9088C0.0292201 14.8267 0 14.7302 0 14.6315V0.5C0 0.22386 0.22386 0 0.5 0C0.59871 0 0.69522 0.0292201 0.77735 0.0839801L11.376 7.14972C11.6057 7.30292 11.6678 7.61332 11.5146 7.84312C11.478 7.89802 11.4309 7.94512 11.376 7.98172Z" fill="#181513"/>
+								</svg>
+							</button>
+						</div>
+						<figcaption class="sr-only">How we craft comfort</figcaption>
+					</figure>
+				</article>
+			</li>
+		</ol>
+	</section>
 </template>
