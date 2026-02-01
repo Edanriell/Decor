@@ -144,11 +144,11 @@
 			</li>
 		</ol>
 	</section>
-	<section class="relative pt-8 pb-8 pl-4 pr-4 md:pt-18 md:pl-8 md:pr-8 md:pb-18">
+	<section class="relative pt-8 pb-8 pl-4 pr-4 md:pt-18 md:pl-8 md:pr-8 md:pb-18 lg:pt-24 lg:pl-20 lg:pr-20 lg:pb-24">
 		<header class="md:flex md:flex-row md:items-center md:justify-between">
 			<div class="flex flex-col mb-5 md:mb-12">
 				<h2
-					class="mb-1 font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-(--colors-texts-text---high-emphasis) md:text-[1.5rem]"
+					class="mb-1 font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-(--colors-texts-text---high-emphasis) md:text-[1.5rem] lg:text-[2rem] lg:leading-[1.3]"
 				>
 					Fresh arrival
 				</h2>
@@ -176,10 +176,14 @@
 				</svg>
 			</NuxtLink>
 		</header>
-		<ol class="grid grid-cols-2 gap-x-4 gap-y-6 pb-15.5 md:grid-cols-3 md:gap-x-5 md:gap-y-[unset] md:pb-18">
+		<ol
+			class="grid grid-cols-2 gap-x-4 gap-y-6 pb-15.5 md:grid-cols-3 md:gap-x-5 md:gap-y-[unset] md:pb-[unset] lg:grid-cols-4 lg:gap-x-6"
+		>
 			<li v-for="(item, index) in freshArrival" :key="item.name">
-				<article :class="['flex flex-col gap-4', index >= 3 && 'md:hidden']">
-					<div class="relative rounded-lg bg-(--colors-surface-surface---light) w-full h-58.5 md:h-85">
+				<article :class="['flex flex-col gap-4', index >= 3 && 'md:hidden lg:flex']">
+					<div
+						class="relative rounded-lg bg-(--colors-surface-surface---light) w-full h-58.5 md:h-85 lg:h-92"
+					>
 						<NuxtPicture
 							:img-attrs="{ class: ['w-full h-full object-cover'] }"
 							:src="item.image"
@@ -194,7 +198,7 @@
 						<NuxtLink :to="item.route" class="flex flex-row items-center justify-between">
 							<div class="flex flex-col gap-1">
 								<h3
-									class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis) max-w-30 truncate md:text-[1rem] md:leading-[1.28] md:max-w-47.5"
+									class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis) max-w-30 truncate md:text-[1rem] md:leading-[1.28] md:max-w-47.5 lg:max-w-51"
 								>
 									{{ item.name }}
 								</h3>
@@ -204,7 +208,7 @@
 								>
 							</div>
 							<svg
-								class="w-2.25 h-2.25 basis-8 shrink-0 grow-0"
+								class="w-2.25 h-2.25 basis-8 shrink-0 grow-0 lg:w-3 lg:h-3 lg:basis-10"
 								fill="none"
 								height="12"
 								viewBox="0 0 12 12"
