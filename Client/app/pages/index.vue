@@ -228,10 +228,10 @@
 			</li>
 		</ol>
 	</section>
-	<section class="pt-12 pb-12 md:pt-18 md:pb-18">
-		<header class="pl-5 pr-5 pb-6 flex flex-col gap-4 md:pl-16 md:pr-16 md:pb-12">
+	<section class="pt-12 pb-12 md:pt-18 md:pb-18 lg:pt-24 lg:pb-[unset]">
+		<header class="pl-5 pr-5 pb-6 flex flex-col gap-4 md:pl-16 md:pr-16 md:pb-12 lg:pl-44 lg:pr-44 lg:pb-20">
 			<h2
-				class="font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-center text-(--colors-texts-text---high-emphasis) md:text-[1.5rem]"
+				class="font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-center text-(--colors-texts-text---high-emphasis) md:text-[1.5rem] lg:text-[2rem] lg:leading-[1.3]"
 			>
 				we are passionate about creating furniture that enriches lives and transforms spaces.
 			</h2>
@@ -245,7 +245,7 @@
 		</header>
 		<div class="relative">
 			<div
-				class="block mb-[-63px] relative h-38 ml-13.25 mr-13.25 rounded-xs overflow-hidden md:h-77 md:ml-32.5 md:mr-32.5 md:rounded-lg md:mb-[-154px]"
+				class="block mb-[-63px] relative h-38 ml-13.25 mr-13.25 rounded-xs overflow-hidden md:h-77 md:ml-32.5 md:mr-32.5 md:rounded-lg md:-mb-38.5 lg:h-124 lg:ml-43.75 lg:mr-43.75 lg:-mb-51"
 			>
 				<NuxtPicture
 					:img-attrs="{ class: ['w-full h-full object-cover'] }"
@@ -258,7 +258,7 @@
 				/>
 			</div>
 			<dl
-				class="pt-22.75 pb-8 flex flex-row pl-4 pr-4 justify-between bg-(--colors-surface-surface---medium) md:pt-50 md:pb-12 md:pl-16 md:pr-16"
+				class="pt-22.75 pb-8 flex flex-row pl-4 pr-4 justify-between bg-(--colors-surface-surface---medium) md:pt-50 md:pb-12 md:pl-16 md:pr-16 lg:pt-75 lg:pb-28.25 lg:pl-51.75 lg:pr-51.75"
 			>
 				<div
 					class="flex flex-col-reverse gap-1 items-center basis-26.5 md:basis-[unset] md:flex-row-reverse md:gap-4"
@@ -269,7 +269,7 @@
 						Total Products
 					</dt>
 					<dd
-						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis) md:text-[2rem]"
+						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis) md:text-[2rem] lg:text-[2.25rem] lg:leading-[1.2]"
 					>
 						2465
 					</dd>
@@ -283,7 +283,7 @@
 						Happy Customers
 					</dt>
 					<dd
-						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis) md:text-[2rem]"
+						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis) md:text-[2rem] lg:text-[2.25rem] lg:leading-[1.2]"
 					>
 						14782 +
 					</dd>
@@ -297,7 +297,7 @@
 						Across the country
 					</dt>
 					<dd
-						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis) md:text-[2rem]"
+						class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-center text-(--colors-texts-text---high-emphasis) md:text-[2rem] lg:text-[2.25rem] lg:leading-[1.2]"
 					>
 						20 +
 					</dd>
