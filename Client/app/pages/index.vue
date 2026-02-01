@@ -144,11 +144,11 @@
 			</li>
 		</ol>
 	</section>
-	<section class="relative pt-8 pb-8 pl-4 pr-4">
-		<header>
-			<div class="flex flex-col mb-5">
+	<section class="relative pt-8 pb-8 pl-4 pr-4 md:pt-18 md:pl-8 md:pr-8 md:pb-18">
+		<header class="md:flex md:flex-row md:items-center md:justify-between">
+			<div class="flex flex-col mb-5 md:mb-12">
 				<h2
-					class="mb-1 font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-(--colors-texts-text---high-emphasis)"
+					class="mb-1 font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-(--colors-texts-text---high-emphasis) md:text-[1.5rem]"
 				>
 					Fresh arrival
 				</h2>
@@ -159,7 +159,7 @@
 				</p>
 			</div>
 			<NuxtLink
-				class="absolute bottom-0 left-[50%] translate-x-[-50%] inline-flex flex-row items-center rounded-lg gap-2 px-6 py-3 bg-(--colors-surface-surface---medium) cursor-pointer"
+				class="absolute bottom-0 left-[50%] translate-x-[-50%] inline-flex flex-row items-center rounded-lg gap-2 px-6 py-3 bg-(--colors-surface-surface---medium) cursor-pointer md:relative md:translate-x-[unset] md:left-[unset] md:bottom-[unset]"
 				to="/"
 			>
 				<span
@@ -176,12 +176,12 @@
 				</svg>
 			</NuxtLink>
 		</header>
-		<ol class="grid grid-cols-2 gap-x-4 gap-y-6 pb-15.5">
-			<li v-for="item in freshArrival" :key="item.name">
-				<article class="flex flex-col gap-4">
-					<div class="relative rounded-lg bg-(--colors-surface-surface---light) w-full h-58.5">
+		<ol class="grid grid-cols-2 gap-x-4 gap-y-6 pb-15.5 md:grid-cols-3 md:gap-x-5 md:gap-y-[unset] md:pb-18">
+			<li v-for="(item, index) in freshArrival" :key="item.name">
+				<article :class="['flex flex-col gap-4', index >= 3 && 'md:hidden']">
+					<div class="relative rounded-lg bg-(--colors-surface-surface---light) w-full h-58.5 md:h-85">
 						<NuxtPicture
-							:img-attrs="{ class: 'w-full h-full object-cover' }"
+							:img-attrs="{ class: ['w-full h-full object-cover'] }"
 							:src="item.image"
 							alt="Modern interior"
 							class="absolute inset-0 w-full h-full z-[1]"
@@ -190,16 +190,16 @@
 							quality="100"
 						/>
 					</div>
-					<footer class="pl-1 pr-1">
+					<footer class="pl-1 pr-1 md:pl-2 md:pr-2">
 						<NuxtLink :to="item.route" class="flex flex-row items-center justify-between">
 							<div class="flex flex-col gap-1">
 								<h3
-									class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis)"
+									class="font-[Urbanist] font-semibold text-[0.875rem] leading-[1.3] text-(--colors-texts-text---high-emphasis) max-w-30 truncate md:text-[1rem] md:leading-[1.28] md:max-w-47.5"
 								>
 									{{ item.name }}
 								</h3>
 								<small
-									class="font-[Urbanist] font-medium text-[0.75rem] leading-[1.2] capitalize text-(--colors-texts-text---low-emphasis)"
+									class="font-[Urbanist] font-medium text-[0.75rem] leading-[1.2] capitalize text-(--colors-texts-text---low-emphasis) md:text-[0.875rem] md:leading-[1.3]"
 									>$ {{ item.price }}</small
 								>
 							</div>
