@@ -72,6 +72,9 @@
 			route: "/"
 		}
 	];
+
+	const isPlaying = ref(false);
+	const videoId = "YOUR_YOUTUBE_VIDEO_ID";
 </script>
 
 <template>
@@ -318,13 +321,25 @@
 				Get more, pay less: Your ticket to furniture bliss!
 			</p>
 		</header>
-		<ol class="grid grid-cols-1 gap-5">
+		<ol class="grid grid-cols-1 grid-rows-3 gap-5">
 			<li class="relative">
-				<article class="relative overflow-hidden rounded-lg p-6">
-					<div>
-						<h3 class="relative z-[2]">Seasonal Sales</h3>
-						<p class="relative z-[2]">Upgrade your space without breaking the bank!</p>
-						<NuxtLink class="relative z-[2]">
+				<article class="relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-21">
+					<div class="flex flex-col items-end">
+						<header class="flex flex-col gap-2 mb-6">
+							<h3
+								class="relative z-[2] font-[Urbanist] font-semibold text-[1.25rem] leading-[140%] uppercase text-right text-(--colors-primary-on---primary)"
+							>
+								Seasonal Sales
+							</h3>
+							<p
+								class="relative z-[2] text-right text-nowrap font-[Urbanist] font-normal text-[0.875rem] leading-[130%] capitalize text-right text-(--colors-primary-on---primary)"
+							>
+								Upgrade your space without breaking the bank!
+							</p>
+						</header>
+						<NuxtLink
+							class="relative z-[2] rounded-lg px-6 py-3 bg-(--colors-button-button-white) flex flex-row items-center font-semibold text-[0.875rem] leading-[130%] uppercase text-(--colors-button-button---dark) gap-2"
+						>
 							<span>Explore</span>
 							<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -348,11 +363,23 @@
 				</article>
 			</li>
 			<li class="relative">
-				<article class="relative overflow-hidden rounded-lg p-6">
-					<div>
-						<h3 class="relative z-[2]">Time is Ticking</h3>
-						<p class="relative z-[2]">Shop Now for Exclusive Limited-Time Discounts!</p>
-						<NuxtLink class="relative z-[2]">
+				<article class="relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-16.5">
+					<div class="flex flex-col items-start">
+						<header class="flex flex-col gap-2 mb-6">
+							<h3
+								class="relative z-[2] font-[Urbanist] font-semibold text-[1.25rem] leading-[140%] uppercase text-left text-(--colors-primary-on---primary)"
+							>
+								Time is Ticking
+							</h3>
+							<p
+								class="relative z-[2] text-left font-[Urbanist] font-normal text-[0.875rem] leading-[130%] capitalize text-(--colors-primary-on---primary)"
+							>
+								Shop Now for Exclusive Limited-Time Discounts!
+							</p>
+						</header>
+						<NuxtLink
+							class="relative z-[2] rounded-lg px-6 py-3 bg-(--colors-button-button-white) flex flex-row items-center font-semibold text-[0.875rem] leading-[130%] uppercase text-(--colors-button-button---dark) gap-2"
+						>
 							<span>Explore</span>
 							<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
 								<path
@@ -376,43 +403,59 @@
 				</article>
 			</li>
 			<li class="relative">
-				<article class="relative">
-					<h3 class="sr-only">How we craft comfort</h3>
-					<figure class="relative">
-						<div
-							class="relative w-full aspect-video bg-(--colors-surface-surface---light) rounded-lg overflow-hidden"
-						>
-							<button
-								aria-label="Play video"
-								class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 p-2 rounded-lg bg-(--colors-primary-white) flex items-center justify-center"
-								type="button"
-							>
-								<svg
-									fill="none"
-									height="16"
-									viewBox="0 0 12 16"
-									width="12"
-									xmlns="http://www.w3.org/2000/svg"
-								>
-									<path
-										d="M11.376 7.98172L0.77735 15.0475C0.54759 15.2007 0.23715 15.1386 0.0839701 14.9088C0.0292201 14.8267 0 14.7302 0 14.6315V0.5C0 0.22386 0.22386 0 0.5 0C0.59871 0 0.69522 0.0292201 0.77735 0.0839801L11.376 7.14972C11.6057 7.30292 11.6678 7.61332 11.5146 7.84312C11.478 7.89802 11.4309 7.94512 11.376 7.98172Z"
-										fill="#181513"
-									/>
-								</svg>
-							</button>
-							<NuxtPicture
-								:img-attrs="{ class: 'w-full h-full object-cover' }"
-								alt="Modern interior"
-								class="absolute inset-0 w-full h-full z-[1]"
-								densities="x1 x2"
-								placeholder="[60, 40, 70, 15]"
-								quality="100"
-								src="/images/modern-interior-5.jpg"
-							/>
+				<figure class="relative">
+					<div
+						class="relative w-full aspect-video bg-(--colors-surface-surface---light) rounded-lg overflow-hidden"
+					>
+						<div v-if="isPlaying" class="absolute inset-0 w-full h-full z-20">
+							<iframe
+								:src="`https://www.youtube.com/embed/${videoId}?autoplay=1`"
+								allow="
+									accelerometer;
+									autoplay;
+									clipboard-write;
+									encrypted-media;
+									gyroscope;
+									picture-in-picture;
+								"
+								allowfullscreen
+								class="w-full h-full"
+								title="How we craft comfort"
+							></iframe>
 						</div>
-						<figcaption class="sr-only">How we craft comfort</figcaption>
-					</figure>
-				</article>
+						<button
+							v-if="!isPlaying"
+							aria-label="Play video: How we craft comfort"
+							class="cursor-pointer absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-10 h-10 rounded-lg bg-(--colors-primary-white) flex items-center justify-center"
+							type="button"
+							@click="isPlaying = true"
+						>
+							<svg
+								class="absolute top-1/2 left-[52%] -translate-x-1/2 -translate-y-1/2"
+								fill="none"
+								height="16"
+								viewBox="0 0 12 16"
+								width="12"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									d="M11.376 7.98172L0.77735 15.0475C0.54759 15.2007 0.23715 15.1386 0.0839701 14.9088C0.0292201 14.8267 0 14.7302 0 14.6315V0.5C0 0.22386 0.22386 0 0.5 0C0.59871 0 0.69522 0.0292201 0.77735 0.0839801L11.376 7.14972C11.6057 7.30292 11.6678 7.61332 11.5146 7.84312C11.478 7.89802 11.4309 7.94512 11.376 7.98172Z"
+									fill="#181513"
+								/>
+							</svg>
+						</button>
+						<NuxtPicture
+							:img-attrs="{ class: 'w-full h-full object-cover' }"
+							alt=""
+							class="absolute inset-0 w-full h-full z-[1]"
+							densities="x1 x2"
+							placeholder="[60, 40, 70, 15]"
+							quality="100"
+							src="/images/modern-interior-5.jpg"
+						/>
+					</div>
+					<figcaption class="sr-only">How we craft comfort</figcaption>
+				</figure>
 			</li>
 		</ol>
 	</section>
