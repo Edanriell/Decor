@@ -308,8 +308,8 @@
 			</dl>
 		</div>
 	</section>
-	<section class="pt-12 pl-4 pr-4 pb-12">
-		<header class="flex flex-col gap-1 mb-5">
+	<section class="pt-12 pl-4 pr-4 pb-12 md:pt-18 md:pl-8 md:pr-8 md:pb-18">
+		<header class="flex flex-col gap-1 mb-5 md:mb-8">
 			<h2
 				class="mb-1 font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-(--colors-texts-text---high-emphasis) md:text-[1.5rem] lg:text-[2rem] lg:leading-[1.3]"
 			>
@@ -321,9 +321,11 @@
 				Get more, pay less: Your ticket to furniture bliss!
 			</p>
 		</header>
-		<ol class="grid grid-cols-1 grid-rows-3 gap-5">
-			<li class="relative">
-				<article class="relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-21">
+		<ol
+			class="grid grid-cols-1 grid-rows-[14.25rem_14.25rem_14.25rem] gap-5 md:grid-rows-[22.875rem_26.25rem] md:grid-cols-2"
+		>
+			<li class="relative row-start-1 row-end-2 md:col-start-1 md:col-end-2">
+				<article class="h-full relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-21">
 					<div class="flex flex-col items-end">
 						<header class="flex flex-col gap-2 mb-6">
 							<h3
@@ -362,8 +364,8 @@
 					/>
 				</article>
 			</li>
-			<li class="relative">
-				<article class="relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-16.5">
+			<li class="relative row-start-2 row-end-3 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
+				<article class="h-full relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-16.5">
 					<div class="flex flex-col items-start">
 						<header class="flex flex-col gap-2 mb-6">
 							<h3
@@ -402,10 +404,10 @@
 					/>
 				</article>
 			</li>
-			<li class="relative">
-				<figure class="relative">
+			<li class="relative row-start-3 row-end-4 md:row-start-2 md:row-end-3 md:col-span-2">
+				<figure class="h-full relative">
 					<div
-						class="relative w-full aspect-video bg-(--colors-surface-surface---light) rounded-lg overflow-hidden"
+						class="h-full relative w-full aspect-video bg-(--colors-surface-surface---light) rounded-lg overflow-hidden"
 					>
 						<div v-if="isPlaying" class="absolute inset-0 w-full h-full z-20">
 							<iframe
