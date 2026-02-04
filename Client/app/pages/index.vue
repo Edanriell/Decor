@@ -308,8 +308,8 @@
 			</dl>
 		</div>
 	</section>
-	<section class="pt-12 pl-4 pr-4 pb-12 md:pt-18 md:pl-8 md:pr-8 md:pb-18">
-		<header class="flex flex-col gap-1 mb-5 md:mb-8">
+	<section class="pt-12 pl-4 pr-4 pb-12 md:pt-18 md:pl-8 md:pr-8 md:pb-18 lg:pt-24 lg:pl-20 lg:pr-20 lg:pb-24">
+		<header class="flex flex-col gap-1 mb-5 md:mb-8 lg:mb-12">
 			<h2
 				class="mb-1 font-[Urbanist] font-semibold text-[1.25rem] leading-[1.4] uppercase text-(--colors-texts-text---high-emphasis) md:text-[1.5rem] lg:text-[2rem] lg:leading-[1.3]"
 			>
@@ -322,10 +322,10 @@
 			</p>
 		</header>
 		<ol
-			class="grid grid-cols-1 grid-rows-[14.25rem_14.25rem_14.25rem] gap-5 md:grid-rows-[22.875rem_26.25rem] md:grid-cols-2"
+			class="grid grid-cols-1 grid-rows-[14.25rem_14.25rem_14.25rem] gap-5 md:grid-rows-[22.875rem_26.25rem] md:grid-cols-2 lg:gap-6"
 		>
 			<li class="relative row-start-1 row-end-2 md:col-start-1 md:col-end-2">
-				<article class="h-full relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-21">
+				<article class="h-full relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-21 lg:p-8">
 					<div class="flex flex-col items-end">
 						<header class="flex flex-col gap-2 mb-6">
 							<h3
@@ -365,7 +365,7 @@
 				</article>
 			</li>
 			<li class="relative row-start-2 row-end-3 md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-2">
-				<article class="h-full relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-16.5">
+				<article class="h-full relative overflow-hidden rounded-lg pl-6 pr-6 pt-6 pb-16.5 lg:p-8">
 					<div class="flex flex-col items-start">
 						<header class="flex flex-col gap-2 mb-6">
 							<h3
