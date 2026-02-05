@@ -122,7 +122,7 @@
 	</section>
 	<section class="relative pt-8 pl-4 pr-4 pb-8 md:pt-18 md:pl-8 md:pr-8 md:pb-18 lg:pt-24 lg:pl-20 lg:pr-20 lg:pb-24">
 		<h2 class="sr-only">Product Categories</h2>
-		<ol class="flex flex-row flex-wrap gap-4 md:-ml-2 md:min-w-192.5 md:justify-center lg:min-w-282.75 lg:-ml-2">
+		<ul class="flex flex-row flex-wrap gap-4 md:-ml-2 md:min-w-192.5 md:justify-center lg:min-w-282.75 lg:-ml-2">
 			<li
 				v-for="(category, index) in productCategories"
 				:key="category.route"
@@ -145,7 +145,7 @@
 					>{{ category.name }}</NuxtLink
 				>
 			</li>
-		</ol>
+		</ul>
 	</section>
 	<section class="relative pt-8 pb-8 pl-4 pr-4 md:pt-18 md:pl-8 md:pr-8 md:pb-18 lg:pt-24 lg:pl-20 lg:pr-20 lg:pb-24">
 		<header class="md:flex md:flex-row md:items-center md:justify-between">
@@ -179,7 +179,7 @@
 				</svg>
 			</NuxtLink>
 		</header>
-		<ol
+		<ul
 			class="grid grid-cols-2 gap-x-4 gap-y-6 pb-15.5 md:grid-cols-3 md:gap-x-5 md:gap-y-[unset] md:pb-[unset] lg:grid-cols-4 lg:gap-x-6"
 		>
 			<li v-for="(item, index) in freshArrival" :key="item.name">
@@ -229,7 +229,7 @@
 					</footer>
 				</article>
 			</li>
-		</ol>
+		</ul>
 	</section>
 	<section class="pt-12 pb-12 md:pt-18 md:pb-18 lg:pt-24 lg:pb-[unset]">
 		<header class="pl-5 pr-5 pb-6 flex flex-col gap-4 md:pl-16 md:pr-16 md:pb-12 lg:pl-44 lg:pr-44 lg:pb-20">
@@ -321,7 +321,7 @@
 				Get more, pay less: Your ticket to furniture bliss!
 			</p>
 		</header>
-		<ol
+		<ul
 			class="grid grid-cols-1 grid-rows-[14.25rem_14.25rem_14.25rem] gap-5 md:grid-rows-[22.875rem_26.25rem] md:grid-cols-2 lg:gap-6"
 		>
 			<li class="relative row-start-1 row-end-2 md:col-start-1 md:col-end-2">
@@ -459,6 +459,111 @@
 					<figcaption class="sr-only">How we craft comfort</figcaption>
 				</figure>
 			</li>
-		</ol>
+		</ul>
+	</section>
+	<section>
+		<div>
+			<header>
+				<div>
+					<h2>Featured category</h2>
+					<p>Get more, pay less: your ticket to furniture bliss!</p>
+				</div>
+				<NuxtLink>
+					<span>View all</span>
+					<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
+						<path
+							clip-rule="evenodd"
+							d="M0.859967 0H7.7933L7.7933 6.93333H6.85997L6.85997 1.5933L0.659966 7.7933L0 7.13333L6.2 0.933333H0.859967V0Z"
+							fill="#181513"
+							fill-rule="evenodd"
+						/>
+					</svg>
+				</NuxtLink>
+			</header>
+			<div>
+				<ul>
+					<li>
+						<LazyNuxtLink to="/">
+							<NuxtPicture
+								:img-attrs="{ class: 'w-full h-full object-cover' }"
+								alt=""
+								class="absolute inset-0 w-full h-full z-[1]"
+								densities="x1 x2"
+								placeholder="[60, 40, 70, 15]"
+								quality="100"
+								src="/images/categories/table.jpg"
+							/>
+							<span>Table</span>
+						</LazyNuxtLink>
+					</li>
+					<li>
+						<LazyNuxtLink to="/">
+							<NuxtPicture
+								:img-attrs="{ class: 'w-full h-full object-cover' }"
+								alt=""
+								class="absolute inset-0 w-full h-full z-[1]"
+								densities="x1 x2"
+								placeholder="[60, 40, 70, 15]"
+								quality="100"
+								src="/images/categories/sofa.jpg"
+							/>
+							<span>Sofa</span>
+						</LazyNuxtLink>
+					</li>
+					<li>
+						<LazyNuxtLink to="/">
+							<NuxtPicture
+								:img-attrs="{ class: 'w-full h-full object-cover' }"
+								alt=""
+								class="absolute inset-0 w-full h-full z-[1]"
+								densities="x1 x2"
+								placeholder="[60, 40, 70, 15]"
+								quality="100"
+								src="/images/categories/chair.jpg"
+							/>
+							<span>Chair</span>
+						</LazyNuxtLink>
+					</li>
+					<li>
+						<LazyNuxtLink to="/">
+							<NuxtPicture
+								:img-attrs="{ class: 'w-full h-full object-cover' }"
+								alt=""
+								class="absolute inset-0 w-full h-full z-[1]"
+								densities="x1 x2"
+								placeholder="[60, 40, 70, 15]"
+								quality="100"
+								src="/images/categories/home-decor.jpg"
+							/>
+							<span>Home decor</span>
+						</LazyNuxtLink>
+					</li>
+				</ul>
+				<div>
+					<button>
+						<svg fill="none" height="19" viewBox="0 0 21 19" width="21" xmlns="http://www.w3.org/2000/svg">
+							<path
+								clip-rule="evenodd"
+								d="M10.6399 1.31993L3.5732 8.3866H20.9199V10.2533H3.5732L10.6399 17.3199L9.31993 18.6399L0 9.31993L9.31993 0L10.6399 1.31993Z"
+								fill="white"
+								fill-rule="evenodd"
+							/>
+						</svg>
+						<span class="sr-only">Previous slide</span>
+					</button>
+					<button>
+						<svg fill="none" height="19" viewBox="0 0 21 19" width="21" xmlns="http://www.w3.org/2000/svg">
+							<path
+								clip-rule="evenodd"
+								d="M11.6 0L20.9199 9.31993L11.6 18.6399L10.2801 17.3199L17.3467 10.2533H0V8.3866H17.3467L10.2801 1.31993L11.6 0Z"
+								fill="white"
+								fill-rule="evenodd"
+							/>
+						</svg>
+						<span class="sr-only">Next slide</span>
+					</button>
+				</div>
+			</div>
+		</div>
 	</section>
 </template>
