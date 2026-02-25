@@ -461,14 +461,22 @@
 			</li>
 		</ul>
 	</section>
-	<section>
-		<div>
-			<header>
-				<div>
-					<h2>Featured category</h2>
-					<p>Get more, pay less: your ticket to furniture bliss!</p>
+	<section class="bg-(--colors-surface-surface---dark) py-[2rem] px-[1rem]">
+		<div class="relative">
+			<header class="flex flex-col mb-[1.5rem]">
+				<div class="flex flex-col gap-y-[0.5rem] mb-[1.25rem]">
+					<h2
+						class="font-[Urbanist] font-semibold text-[1.25rem] leading-[140%] uppercase text-(--colors-primary-white)"
+					>
+						Featured category
+					</h2>
+					<p class="font-[Urbanist] font-normal text-[0.75rem] leading-[120%] text-(--colors-primary-white)">
+						Get more, pay less: your ticket to furniture bliss!
+					</p>
 				</div>
-				<NuxtLink>
+				<NuxtLink
+					class="self-start rounded-[0.5rem] bg-(--colors-surface-surface---medium) px-6 py-3 flex flex-row items-center gap-x-[0.5rem] font-[Urbanist] font-semibold text-[0.875rem] leading-[130%] uppercase text-(--colors-texts-text---high-emphasis)"
+				>
 					<span>View all</span>
 					<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
 						<path
@@ -480,23 +488,26 @@
 					</svg>
 				</NuxtLink>
 			</header>
-			<div>
-				<ul>
-					<li>
+			<div style="overflow: hidden; margin-right: -16px">
+				<ul class="grid grid-cols-[repeat(4,_263px)] grid-rows-[345px] gap-x-6">
+					<li class="relative rounded-[0.5rem] overflow-hidden">
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
 								alt=""
-								class="absolute inset-0 w-full h-full z-[1]"
+								class="absolute inset-0 w-full h-full z-1"
 								densities="x1 x2"
 								placeholder="[60, 40, 70, 15]"
 								quality="100"
 								src="/images/categories/table.jpg"
 							/>
-							<span>Table</span>
+							<span
+								class="bg-(--colors-primary-white) rounded-lg px-4 py-2 absolute bottom-3 left-3 z-10 font-[Urbanist] font-semibold text-[16px] leading-[128%] text-(--colors-texts-text---high-emphasis)"
+								>Table</span
+							>
 						</LazyNuxtLink>
 					</li>
-					<li>
+					<li class="relative rounded-lg overflow-hidden">
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
@@ -507,10 +518,13 @@
 								quality="100"
 								src="/images/categories/sofa.jpg"
 							/>
-							<span>Sofa</span>
+							<span
+								class="bg-(--colors-primary-white) rounded-lg px-4 py-2 absolute bottom-3 left-3 z-10 font-[Urbanist] font-semibold text-[16px] leading-[128%] text-(--colors-texts-text---high-emphasis)"
+								>Sofa</span
+							>
 						</LazyNuxtLink>
 					</li>
-					<li>
+					<li class="relative rounded-[0.5rem] overflow-hidden">
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
@@ -521,10 +535,13 @@
 								quality="100"
 								src="/images/categories/chair.jpg"
 							/>
-							<span>Chair</span>
+							<span
+								class="bg-(--colors-primary-white) rounded-lg px-4 py-2 absolute bottom-3 left-3 z-10 font-[Urbanist] font-semibold text-[16px] leading-[128%] text-(--colors-texts-text---high-emphasis)"
+								>Chair</span
+							>
 						</LazyNuxtLink>
 					</li>
-					<li>
+					<li class="relative rounded-[0.5rem] overflow-hidden">
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
@@ -535,12 +552,15 @@
 								quality="100"
 								src="/images/categories/home-decor.jpg"
 							/>
-							<span>Home decor</span>
+							<span
+								class="bg-(--colors-primary-white) rounded-lg px-4 py-2 absolute bottom-3 left-3 z-10 font-[Urbanist] font-semibold text-[16px] leading-[128%] text-(--colors-texts-text---high-emphasis)"
+								>Home decor</span
+							>
 						</LazyNuxtLink>
 					</li>
 				</ul>
-				<div>
-					<button>
+				<div class="mt-4 flex flex-row items-center gap-x-2">
+					<button class="px-2.75 py-3.25 cursor-pointer">
 						<svg fill="none" height="19" viewBox="0 0 21 19" width="21" xmlns="http://www.w3.org/2000/svg">
 							<path
 								clip-rule="evenodd"
@@ -551,7 +571,7 @@
 						</svg>
 						<span class="sr-only">Previous slide</span>
 					</button>
-					<button>
+					<button class="px-2.75 py-3.25 cursor-pointer">
 						<svg fill="none" height="19" viewBox="0 0 21 19" width="21" xmlns="http://www.w3.org/2000/svg">
 							<path
 								clip-rule="evenodd"
