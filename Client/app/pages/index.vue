@@ -461,23 +461,25 @@
 			</li>
 		</ul>
 	</section>
-	<section class="bg-(--colors-surface-surface---dark) py-[2rem] px-[1rem]">
+	<section class="bg-(--colors-surface-surface---dark) py-[2rem] px-[1rem] md:py-12 md:px-8">
 		<div class="relative">
-			<header class="flex flex-col mb-[1.5rem]">
-				<div class="flex flex-col gap-y-[0.5rem] mb-[1.25rem]">
+			<header class="flex flex-col mb-[1.5rem] md:items-center md:mb-8">
+				<div class="flex flex-col gap-y-[0.5rem] mb-[1.25rem] md:mb-[unset]">
 					<h2
-						class="font-[Urbanist] font-semibold text-[1.25rem] leading-[140%] uppercase text-(--colors-primary-white)"
+						class="font-[Urbanist] font-semibold text-[1.25rem] leading-[140%] uppercase text-(--colors-primary-white) md:text-center md:text-[1.5rem]"
 					>
 						Featured category
 					</h2>
-					<p class="font-[Urbanist] font-normal text-[0.75rem] leading-[120%] text-(--colors-primary-white)">
+					<p
+						class="font-[Urbanist] font-normal text-[0.75rem] leading-[120%] text-(--colors-primary-white) md:text-center md:text-[0.875rem] md:leading-[130%]"
+					>
 						Get more, pay less: your ticket to furniture bliss!
 					</p>
 				</div>
 				<NuxtLink
-					class="self-start rounded-[0.5rem] bg-(--colors-surface-surface---medium) px-6 py-3 flex flex-row items-center gap-x-[0.5rem] font-[Urbanist] font-semibold text-[0.875rem] leading-[130%] uppercase text-(--colors-texts-text---high-emphasis)"
+					class="max-h-[42px] self-start rounded-[0.5rem] bg-(--colors-surface-surface---medium) px-6 py-3 flex flex-row items-center gap-x-[0.5rem] font-[Urbanist] font-semibold text-[0.875rem] leading-[130%] uppercase text-(--colors-texts-text---high-emphasis) md:absolute md:bottom-0 md:left-[50%] md:translate-x-[-50%]"
 				>
-					<span>View all</span>
+					<span class="pt-[4.2px] pr-[4.2px] pb-[4.01px] pl-[4.01px]">View all</span>
 					<svg fill="none" height="8" viewBox="0 0 8 8" width="8" xmlns="http://www.w3.org/2000/svg">
 						<path
 							clip-rule="evenodd"
@@ -488,9 +490,13 @@
 					</svg>
 				</NuxtLink>
 			</header>
-			<div style="overflow: hidden; margin-right: -16px">
-				<ul class="grid grid-cols-[repeat(4,_263px)] grid-rows-[345px] gap-x-6">
-					<li class="relative rounded-[0.5rem] overflow-hidden">
+			<div class="md:mr-[unset]!" style="overflow: hidden; margin-right: -16px">
+				<ul
+					class="grid grid-cols-[repeat(4,_263px)] grid-rows-[345px] gap-x-6 md:grid-cols-3 md:grid-rows-[repeat(2,_155px)] md:gap-x-5 md:gap-y-5"
+				>
+					<li
+						class="relative rounded-[0.5rem] overflow-hidden md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3"
+					>
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
@@ -507,7 +513,9 @@
 							>
 						</LazyNuxtLink>
 					</li>
-					<li class="relative rounded-lg overflow-hidden">
+					<li
+						class="relative rounded-lg overflow-hidden md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3"
+					>
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
@@ -524,7 +532,9 @@
 							>
 						</LazyNuxtLink>
 					</li>
-					<li class="relative rounded-[0.5rem] overflow-hidden">
+					<li
+						class="relative rounded-[0.5rem] overflow-hidden md:col-start-3 md:col-end-4 md:row-start-1 md:row-end-2"
+					>
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
@@ -541,7 +551,9 @@
 							>
 						</LazyNuxtLink>
 					</li>
-					<li class="relative rounded-[0.5rem] overflow-hidden">
+					<li
+						class="relative rounded-[0.5rem] overflow-hidden md:col-start-3 md:col-end-4 md:row-start-2 md:row-end-3"
+					>
 						<LazyNuxtLink to="/">
 							<NuxtPicture
 								:img-attrs="{ class: 'w-full h-full object-cover' }"
@@ -559,7 +571,7 @@
 						</LazyNuxtLink>
 					</li>
 				</ul>
-				<div class="mt-4 flex flex-row items-center gap-x-2">
+				<div class="mt-4 flex flex-row items-center gap-x-2 md:mt-8">
 					<button class="px-2.75 py-3.25 cursor-pointer">
 						<svg fill="none" height="19" viewBox="0 0 21 19" width="21" xmlns="http://www.w3.org/2000/svg">
 							<path
